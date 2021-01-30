@@ -3,13 +3,6 @@ from events_app import db
 from sqlalchemy.orm import backref
 import enum
 
-# TODO: Create a model called `Guest` with the following fields:
-# - id: primary key
-# - name: String column
-# - email: String column
-# - phone: String column
-# - events_attending: relationship to "Event" table with a secondary table
-
 
 class EventType(enum.Enum):
     PARTY = 1
