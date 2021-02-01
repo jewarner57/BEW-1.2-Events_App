@@ -17,6 +17,17 @@
         </label>
     </p>
     <p>
+        <!-- Create dropdown for all event types -->
+        <label for="type">Event Type:</label>
+        <select name="type" id="type">
+            {% for type in eventTypes %}
+
+            <option value="{{type.name}}">{{type.name.title()}}</option>
+
+            {% endfor %}
+        </select>
+    </p>
+    <p>
         <label>
             Date and Time: <br>
             <input type="date" name="date" placeholder="Date format mm-dd-YYYY">
