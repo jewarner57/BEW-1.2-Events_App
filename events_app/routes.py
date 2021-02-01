@@ -82,7 +82,7 @@ def create():
         except ValueError:
             print('there was an error: incorrect datetime format')
 
-        # Create a new event with the given title, description, &
+        # Creates a new event with the given title, description, &
         # datetime, then adds and commits it to the database
 
         newEvent = Event(title=new_event_title,

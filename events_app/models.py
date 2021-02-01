@@ -4,6 +4,7 @@ from sqlalchemy.orm import backref
 import enum
 
 
+# enum for setting event type
 class EventType(enum.Enum):
     PARTY = 1
     STUDY = 2
