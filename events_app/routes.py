@@ -45,9 +45,10 @@ def rsvp(event_id):
     if is_returning_guest:
         # Looks up the guest by name, and adds the event to their
         # events_attending, then commits to the database
-        guest = Guest.query.filter_by(name=guest_name)
+        guest = Guest.query.filter_by(name=guest_name)  #.one()
 
         guest.events_attending.append(event)
+        db.session.add(guest)
         db.session.commit()
 
     else:
